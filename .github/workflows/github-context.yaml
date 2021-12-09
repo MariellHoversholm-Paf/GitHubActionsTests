@@ -8,8 +8,10 @@ jobs:
       - name: Dump env
         run: env | sort
       - name: Dump GitHub context
-        run: echo "context: $GITHUB_CONTEXT"
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
+        shell: bash
+        run: |
+          echo "context: $GITHUB_CONTEXT"
 
 # vim: set ff=unix autoindent ts=2 sw=2 tw=0 et :
