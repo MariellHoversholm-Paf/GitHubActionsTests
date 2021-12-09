@@ -1,0 +1,15 @@
+name: GitHub Context tests
+on: push
+
+jobs:
+  print-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump env
+        run: env | sort
+      - name: Dump GitHub context
+        run: echo "context: $GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+
+# vim: set ff=unix autoindent ts=2 sw=2 tw=0 et :
