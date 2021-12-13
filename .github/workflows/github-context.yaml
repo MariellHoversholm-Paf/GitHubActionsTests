@@ -3,7 +3,7 @@ on: push
 
 jobs:
   print-context:
-    runs-on: ubuntu-latest
+    container: ubuntu:latest
     steps:
       - name: Dump env
         run: env | sort
