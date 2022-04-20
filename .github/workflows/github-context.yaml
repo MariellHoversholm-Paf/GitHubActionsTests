@@ -1,5 +1,11 @@
 name: GitHub Context tests
-on: push
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      workflow_input:
+        description: Some text
+        required: true
 
 jobs:
   print-context:
