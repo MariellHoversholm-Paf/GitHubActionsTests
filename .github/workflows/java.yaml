@@ -11,5 +11,8 @@ jobs:
           java-version: '11'
           distribution: 'liberica'
           cache: ''
+      - name: Log notice message
+        run:
+          echo -e "::notice title=Testing::Hello\n\`world\`"
 
 # vim: set ff=unix autoindent ts=2 sw=2 tw=0 et :
