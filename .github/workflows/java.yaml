@@ -13,6 +13,6 @@ jobs:
           cache: ''
       - name: Log notice message
         run:
-          echo -e "::notice title=Testing::Hello\n\`world\`"
+          echo "::notice title=Testing::Hello \`world\`"
 
 # vim: set ff=unix autoindent ts=2 sw=2 tw=0 et :
